@@ -43,7 +43,8 @@ public class Shift {
                     encodedText.charAt(0));
         }
 
-        return shiftStr(encodedText.substring(1), -offset);
+        String textToDecode = encodedText.substring(1);
+        return shiftStr(textToDecode, -offset);
     };
 
     /**
