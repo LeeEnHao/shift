@@ -39,7 +39,8 @@ public class Shift {
         int offset = indexOf(encodedText.charAt(0));
 
         if (-1 == offset) {
-            throw new InvalidOffsetException("offset character is not found in reference table");
+            throw new InvalidOffsetException("offset character is not found in reference table: " +
+                    encodedText.charAt(0));
         }
 
         return shiftStr(encodedText.substring(1), -offset);
